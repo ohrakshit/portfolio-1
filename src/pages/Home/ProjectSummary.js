@@ -11,7 +11,7 @@ import { media } from 'utils/style';
 import deviceModels from 'components/Model/deviceModels';
 import Heading from 'components/Heading';
 import Text from 'components/Text';
-import { useTheme } from 'components/ThemeProvider';
+
 import './ProjectSummary.css';
 
 const ProjectSummary = ({
