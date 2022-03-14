@@ -1,7 +1,6 @@
 import { Fragment } from 'react';
 import classNames from 'classnames';
 import { Transition } from 'react-transition-group';
-import Link from 'components/Link';
 import { Button } from 'components/Button';
 import DecoderText from 'components/DecoderText';
 import Divider from 'components/Divider';
@@ -12,7 +11,6 @@ import ProfileImgLarge from 'assets/profile-large.jpg';
 import ProfileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import { reflow } from 'utils/transition';
 import { media } from 'utils/style';
-import { ReactComponent as KatakanaProfile } from 'assets/katakana-profile.svg';
 import Heading from 'components/Heading';
 import Text from 'components/Text';
 import './Profile.css';

@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useRef } from 'react';
+import { Fragment, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useAppContext, useScrollRestore } from 'hooks';
 import Footer from 'components/Footer';
@@ -12,11 +12,9 @@ import {
   ProjectSectionText,
   ProjectBackground,
   ProjectHeader,
-  ProjectSectionColumns,
 } from 'components/ProjectLayout';
-import ThemeProvider, { useTheme } from 'components/ThemeProvider';
-import Image from 'components/Image';
-import SegmentedControl, { SegmentedControlOption } from 'components/SegmentedControl';
+import { useTheme } from 'components/ThemeProvider';
+
 import prerender from 'utils/prerender';
 import { media } from 'utils/style';
 import backgroundSpr from 'assets/spr-background.jpg';
@@ -28,43 +26,7 @@ import imageSprLessonBuilderLightPlaceholder from 'assets/spr-lesson-builder-lig
 import imageSprLessonBuilderDark from 'assets/spr-lesson-builder-dark.jpg';
 import imageSprLessonBuilderDarkLarge from 'assets/spr-lesson-builder-dark-large.jpg';
 import imageSprLessonBuilderDarkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprComponentsDark from 'assets/spr-components-dark.png';
-import imageSprComponentsDarkLarge from 'assets/spr-components-dark-large.png';
-import imageSprComponentsDarkPlaceholder from 'assets/spr-components-dark-placeholder.png';
-import imageSprComponentsLight from 'assets/spr-components-light.png';
-import imageSprComponentsLightLarge from 'assets/spr-components-light-large.png';
-import imageSprComponentsLightPlaceholder from 'assets/spr-components-light-placeholder.png';
-import imageSprDesignSystemDark from 'assets/spr-design-system-dark.png';
-import imageSprDesignSystemDarkLarge from 'assets/spr-design-system-dark-large.png';
-import imageSprDesignSystemDarkPlaceholder from 'assets/spr-design-system-dark-placeholder.png';
-import imageSprDesignSystemLight from 'assets/spr-design-system-light.png';
-import imageSprDesignSystemLightLarge from 'assets/spr-design-system-light-large.png';
-import imageSprDesignSystemLightPlaceholder from 'assets/spr-design-system-light-placeholder.png';
-import imageSprStoryboarderDark from 'assets/spr-storyboarder-dark.png';
-import imageSprStoryboarderDarkLarge from 'assets/spr-storyboarder-dark-large.png';
-import imageSprStoryboarderDarkPlaceholder from 'assets/spr-storyboarder-dark-placeholder.png';
-import imageSprStoryboarderLight from 'assets/spr-storyboarder-light.png';
-import imageSprStoryboarderLightLarge from 'assets/spr-storyboarder-light-large.png';
-import imageSprStoryboarderLightPlaceholder from 'assets/spr-storyboarder-light-placeholder.png';
-import imageSprBackgroundVolcanism from 'assets/spr-background-volcanism.jpg';
-import imageSprBackgroundVolcanismLarge from 'assets/spr-background-volcanism-large.jpg';
-import imageSprBackgroundVolcanismPlaceholder from 'assets/spr-background-volcanism-placeholder.jpg';
-import imageSprSchema1Light from 'assets/spr-schema-1-light.png';
-import imageSprSchema1LightLarge from 'assets/spr-schema-1-light-large.png';
-import imageSprSchema1LightPlaceholder from 'assets/spr-schema-1-light-placeholder.png';
-import imageSprSchema1Dark from 'assets/spr-schema-1-dark.png';
-import imageSprSchema1DarkLarge from 'assets/spr-schema-1-dark-large.png';
-import imageSprSchema1DarkPlaceholder from 'assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema2Light from 'assets/spr-schema-2-light.png';
-import imageSprSchema2LightLarge from 'assets/spr-schema-2-light-large.png';
-import imageSprSchema2LightPlaceholder from 'assets/spr-schema-2-light-placeholder.png';
-import imageSprSchema2Dark from 'assets/spr-schema-2-dark.png';
-import imageSprSchema2DarkLarge from 'assets/spr-schema-2-dark-large.png';
-import imageSprSchema2DarkPlaceholder from 'assets/spr-schema-2-dark-placeholder.png';
-import videoSprMotion from 'assets/spr-motion.mp4';
-import videoSprMotionLarge from 'assets/spr-motion-large.mp4';
-import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
-import Earth, { EarthSection } from './Earth';
+
 import './index.css';
 
 const title = 'Music Source Separataion using AI';
@@ -74,17 +36,10 @@ const roles = ['Deep Learning Engineer', 'Working with Audio Content'];
 
 const ProjectSPR = () => {
   const { themeId } = useTheme();
-  const { dispatch } = useAppContext();
-  const motionSectionRef = useRef();
-  const earthSectionRef = useRef();
+
   useScrollRestore();
 
   const isDark = themeId === 'dark';
-  const themes = ['dark', 'light'];
-
-  const handleThemeChange = index => {
-    dispatch({ type: 'setTheme', value: themes[index] });
-  };
 
   return (
     <Fragment>

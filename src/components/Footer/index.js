@@ -1,4 +1,3 @@
-import Link from 'components/Link';
 import './index.css';
 
 const Footer = () => (
