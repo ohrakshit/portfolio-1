@@ -1,6 +1,6 @@
-import { Fragment, useRef } from 'react';
+import { Fragment } from 'react';
 import { Helmet } from 'react-helmet';
-import { useAppContext, useScrollRestore } from 'hooks';
+import { useScrollRestore } from 'hooks';
 import Footer from 'components/Footer';
 import {
   ProjectContainer,

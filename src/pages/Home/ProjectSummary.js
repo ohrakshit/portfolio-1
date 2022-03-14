@@ -27,7 +27,6 @@ const ProjectSummary = ({
   alternate,
   ...rest
 }) => {
-  const theme = useTheme();
   const { width } = useWindowSize();
   const titleId = `${id}-title`;
   const isMobile = width <= media.tablet;
