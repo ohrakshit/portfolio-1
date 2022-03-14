@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://ohrakshit.com",
   "description": "Portfolio site for Hamish Williams",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/ohrakshit",
   "author": "Rakshit Kumar",
   "devDependencies": {
     "@babel/core": "^7.12.3",
