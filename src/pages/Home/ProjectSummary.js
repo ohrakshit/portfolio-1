@@ -91,17 +91,6 @@ const ProjectSummary = ({
     <div className="project-summary__preview">
       {model.type === 'laptop' && (
         <Fragment>
-          <KatakanaProject
-            style={{ '--opacity': svgOpacity }}
-            className={classNames(
-              'project-summary__svg',
-              'project-summary__svg--laptop',
-              `project-summary__svg--${status}`,
-              {
-                'project-summary__svg--light': theme.themeId === 'light',
-              }
-            )}
-          />
           <Model
             className={classNames(
               'project-summary__model',
@@ -125,17 +114,6 @@ const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <Fragment>
-          <KatakanaProject
-            style={{ '--opacity': svgOpacity }}
-            className={classNames(
-              'project-summary__svg',
-              'project-summary__svg--phone',
-              `project-summary__svg--${status}`,
-              {
-                'project-summary__svg--light': theme.themeId === 'light',
-              }
-            )}
-          />
           <Model
             className={classNames(
               'project-summary__model',

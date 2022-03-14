@@ -99,7 +99,7 @@ const Contact = () => {
   return (
     <Section className={classNames('contact', `contact--${status}`)}>
       <Helmet>
-        <title>Contact | Hamish Williams</title>
+        <title>Contact | Rakshit Kumar</title>
         <meta
           name="description"
           content="Send me a message if you’re interested in discussing a project or if you just want to say hi"
@@ -124,7 +124,7 @@ const Contact = () => {
                     delay={300}
                   />
                 </Heading>
-                <Divider
+                {/* <Divider
                   className={classNames(
                     'contact__divider',
                     `contact__divider--${status}`,
@@ -155,7 +155,7 @@ const Contact = () => {
                   label="Message"
                   maxLength={4096}
                   {...message}
-                />
+                /> */}
                 <TransitionGroup component={null}>
                   {!!statusError && (
                     <Transition timeout={msToNum(tokens.base.durationM)}>
@@ -194,7 +194,7 @@ const Contact = () => {
                   icon="send"
                   type="submit"
                 >
-                  Send Message
+                  Email me at rakshitkumar90@gmail.com
                 </Button>
               </form>
             )}

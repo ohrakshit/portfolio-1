@@ -67,15 +67,10 @@ import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
 import Earth, { EarthSection } from './Earth';
 import './index.css';
 
-const title = 'Designing the future of education';
+const title = 'Music Source Separataion using AI';
 const description =
-  'I worked as the design lead on a major iteration of Smart Sparrow’s product. We took the platform in a bold new direction, focusing on becoming the best tool for learning designers.';
-const roles = [
-  'Art Direction',
-  'UX and UI Design',
-  'Front End Development',
-  'Motion Design',
-];
+  'One of the best projects that I worked upon. Isolating a singer from the background music to make a karaoke version of a song or isolate the bass guitar from the rest of the band so a musician can learn the part. Put another way, given a mixture of multiple sources, how can we recover only the source signals we’re interested in?';
+const roles = ['Deep Learning Engineer', 'Working with Audio Content'];
 
 const ProjectSPR = () => {
   const { themeId } = useTheme();
@@ -92,7 +87,6 @@ const ProjectSPR = () => {
   };
 
   return (
-
     <Fragment>
       <ProjectContainer className="spr">
         <Helmet>
@@ -108,7 +102,7 @@ const ProjectSPR = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.smartsparrow.com/"
+          url="https://colab.research.google.com/drive/17j3mPO6r5rkWEwHlHNLrHnUBYpDYutsb"
           roles={roles}
         />
         <ProjectSection first>
@@ -135,17 +129,19 @@ const ProjectSPR = () => {
           <ProjectTextRow>
             <ProjectSectionHeading>The problem</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              It is often the case that there are more sources within the mixture than
+              there are mixture signals. Because of this, source separation is considered
+              an underdetermined problem, meaning that there are fewer observations (i.e.,
+              the mixture) than there are required outcomes (i.e., the desires source(s)).
+              For example, if a stereo mixture contains a recording of a piano quartet
+              (e.g. a piano, violin, viola, and cell) , for any desired source in the
+              mixture we only have two observations (each channel of the stereo mix),
+              therefore source separation would be a useful tool to isolate one of the
+              sources (e.g., just the piano).
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
-        <ProjectSection light={isDark}>
+        {/* <ProjectSection light={isDark}>
           <ProjectSectionContent>
             <Image
               key={themeId}
@@ -182,8 +178,8 @@ const ProjectSPR = () => {
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
+        </ProjectSection> */}
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <Image
               raised
@@ -211,8 +207,8 @@ const ProjectSPR = () => {
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
-        <ThemeProvider themeId="dark">
+        </ProjectSection> */}
+        {/* <ThemeProvider themeId="dark">
           <ProjectSection
             ref={motionSectionRef}
             backgroundOverlayOpacity={0.5}
@@ -248,8 +244,8 @@ const ProjectSPR = () => {
               />
             </ProjectSectionColumns>
           </ProjectSection>
-        </ThemeProvider>
-        <ProjectSection>
+        </ThemeProvider> */}
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
               <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
@@ -504,7 +500,7 @@ const ProjectSPR = () => {
               meshes={['Atmosphere', 'EarthFull']}
             />
           </Earth>
-        </ThemeProvider>
+        </ThemeProvider> */}
       </ProjectContainer>
       <Footer />
     </Fragment>

@@ -23,7 +23,13 @@ import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+const disciplines = [
+  'Photographer',
+  'Cinematographer',
+  'Leader',
+  'Social Worker',
+  'Traveller',
+];
 
 const Home = () => {
   const { status } = useRouteTransition();
@@ -139,10 +145,10 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>Hamish Williams | Designer + Developer</title>
+        <title>Rakshit Kumar | Developer + Explorer</title>
         <meta
           name="description"
-          content="Portfolio of Hamish Williams – a digital designer working on web &amp; mobile
+          content="Portfolio of Rakshit Kumar – a digital designer working on web &amp; mobile
           apps with a focus on motion and user experience design."
         />
         <link rel="prefetch" href={iphone11} as="fetch" crossorigin="" />
@@ -159,8 +165,8 @@ const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Music Source Separation using AI"
+        description="Designing an approach to separate Instruments & Vocals from music"
         buttonText="View Project"
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -181,10 +187,10 @@ const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Data Summarization"
+        description="Designing an end-to-end application to Summarize text data using NLP"
         buttonText="View Website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://ohrakshit.pythonanywhere.com/"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -207,9 +213,9 @@ const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Project"
+        title="An Insight Into My World"
+        description="You thought that was it? There's a lot more to a person than just their profession."
+        buttonText="Take A Look"
         buttonLink="/projects/slice"
         model={{
           type: 'laptop',

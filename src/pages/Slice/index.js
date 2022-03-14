@@ -40,10 +40,10 @@ import prerender from 'utils/prerender';
 import { media } from 'utils/style';
 import './index.css';
 
-const title = 'Biomedical image collaboration';
+const title = 'Never Limit Yourself';
 const description =
-  'This project involved designing a better way for biomedical educators and learners to annotate digital slides together.';
-const roles = ['User Research', 'UX Design', 'Interface Design'];
+  'Travel, Exploration & Kindness will take you places you have not yet dreamt of.';
+const roles = ['Social Worker', 'Explorer', 'Cinematographer'];
 
 const ProjectSlice = () => {
   useScrollRestore();
@@ -61,12 +61,7 @@ const ProjectSlice = () => {
           opacity={0.8}
           entered={!prerender}
         />
-        <ProjectHeader
-          title={title}
-          description={description}
-          url="https://www.best.edu.au/s/q2yjjvl7?data=8%404!9%4020303!10%40-15087&version=1"
-          roles={roles}
-        />
+        <ProjectHeader title={title} description={description} roles={roles} />
         <ProjectSection first>
           <ProjectSectionContent>
             <ProjectImage
@@ -80,16 +75,23 @@ const ProjectSlice = () => {
         <ProjectSection>
           <ProjectSectionColumns centered className="slice__columns">
             <div className="sidebar__images-text">
-              <ProjectSectionHeading>Bringing it together</ProjectSectionHeading>
+              <ProjectSectionHeading>Community</ProjectSectionHeading>
               <ProjectSectionText>
-                Teachers needed a better way to create collaborative group activities by
-                annotating slides on Slice. Before starting this project, a layer could
-                only be annotated by a single user, making it difficult for learners to
-                work together.
+                Had the privilege to work with some extraordinary people in making our
+                society a better place. Part of our mission was to educate the
+                underprivileged & help them through various means.
               </ProjectSectionText>
               <ProjectSectionText>
-                Our solution was to allow users to be invited to a layer, where they can
-                see others’ annotations and make their own.
+                Our solution was to set up StreetKaksha's in the slums where we mobilize
+                volunteers as teachers to provide kids with basic education.
+                <p>
+                  <a
+                    style={{ color: '#85C88A', textDecorationLine: 'underline' }}
+                    href="https://www.instagram.com/ourswapna/"
+                  >
+                    Meet Team Swapna!
+                  </a>
+                </p>
               </ProjectSectionText>
             </div>
             <div className="slice__sidebar-images">
@@ -113,18 +115,35 @@ const ProjectSlice = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Improving the experience</ProjectSectionHeading>
+              <ProjectSectionHeading>Making Travel Impactful</ProjectSectionHeading>
               <ProjectSectionText>
-                A problem we heard about often form users was that it was difficult to
-                find images they had previously seen or worked on. To solve this we added
-                a new tab that lists all previously annotated slides. In addition, we
-                added the ability to favorite slides, so if users find an interesting
-                slide they want to annotate later, they can easily save it to their
-                account.
+                At{' '}
+                <a
+                  href="https://www.instagram.com/volunteeryatra/"
+                  style={{ color: '#EBD671', textDecorationLine: 'underline' }}
+                >
+                  VolunteerYatra
+                </a>
+                , we are trying to solve the problem of rural migration by creating
+                opportunities in remote areas. Anyone with a required skill can volunteer
+                & in return receive benefits such as stay, food & a beautiful place to be
+                at.
+                <p>
+                  Before joining the team as a <b>Technical Head</b>, I volunteered as a{' '}
+                  <b>Cinematographer</b> to document a trek.
+                  <p>
+                    <a
+                      href="https://www.instagram.com/tv/CXRK11ppFpR/"
+                      style={{ color: 'white', textDecorationLine: 'underline' }}
+                    >
+                      Watch the Reel
+                    </a>
+                  </p>
+                </p>
               </ProjectSectionText>
             </ProjectTextRow>
             <Image
-              srcSet={`${sliceSlides} 800w, ${sliceSlidesLarge} 1440w`}
+              srcSet={`${sliceSlides} 200w, ${sliceSlidesLarge} 520w`}
               placeholder={sliceSlidesPlaceholder}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
@@ -153,13 +172,14 @@ const ProjectSlice = () => {
               </div>
             </div>
             <div className="slice__grid-text">
-              <ProjectSectionHeading>Meaningful details</ProjectSectionHeading>
+              <ProjectSectionHeading>
+                Being An <b style={{ color: '#037ef3' }}>AIESECer</b>
+              </ProjectSectionHeading>
               <ProjectSectionText>
-                Marking and annotating areas on high resolution biomedical images is the
-                core experience of the app, and it was easy to get lost or lose sense of
-                scale when zooming in on details. Adding measurements for the perimeter
-                and area of an annotation both helped to communicate the overall scale of
-                the image and how large the annotated feature is in comparison.
+                My love for communities started with being a part of AIESEC, a global
+                youth run organization that cultivates leadership in individuals. Amount
+                of amazing peple that I got to meet was overwhelming & inspiring.
+                <p>Once an AIESECer, always an AIESECer!</p>
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>

@@ -78,7 +78,7 @@ const DisplacementSphere = props => {
       shader.fragmentShader = fragShader;
     };
 
-    geometry.current = new SphereBufferGeometry(32, 128, 128);
+    geometry.current = new SphereBufferGeometry(32, 64, 128);
 
     sphere.current = new Mesh(geometry.current, material.current);
     sphere.current.position.z = 0;
